@@ -1,14 +1,8 @@
-﻿
-#include<stdio.h>
-#include<string.h>
-void main() {
+﻿#include<stdio.h>
+#include"toan.h"
 
-		int x = 0;
-		int tong = 0;
-		printf("nhap so nguyen: ");
-		scanf_s("%d", &x);
-		for (int i = 0; i <= x; i++) {
-			tong = tong + i;
-		}
-		printf("tong la: %d", tong);
+
+void main() {
+	printf("2+3 = %d\n", tong(2, 3));
+	printf("2x3 = %d\n", tich(2, 3));
 }
