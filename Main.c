@@ -1,9 +1,9 @@
 ﻿
 #include<stdio.h>
 void main() {
-	unsigned int local = 0;
+	unsigned float local = 0;
 	printf("nhap diem: ");
-	scanf_s("%d", &local);
+	scanf_s("%f", &local);
 	if (local >= 8) {
 		printf("Gioi");
 	}
