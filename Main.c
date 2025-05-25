@@ -1,20 +1,14 @@
 ﻿
 #include<stdio.h>
+#include<string.h>
 void main() {
-	unsigned float local = 0;
-	printf("nhap diem: ");
-	scanf_s("%f", &local);
-	if (local >= 8) {
-		printf("Gioi");
-	}
-	else if(8> local >= 6.5 ){
-		printf("Kha");
-	}
-	else if (6.5 > local >= 5) {
-		printf("Trung Binh");
-	}
-	else{
-		printf("Yeu");
-	}
-	
+
+		int x = 0;
+		int tong = 0;
+		printf("nhap so nguyen: ");
+		scanf_s("%d", &x);
+		for (int i = 0; i <= x; i++) {
+			tong = tong + i;
+		}
+		printf("tong la: %d", tong);
 }
