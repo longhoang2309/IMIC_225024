@@ -19,5 +19,4 @@ void xep_loai(float diem_trung_bình) {
 	else {
 		printf("loai YEU\n");
 	}
-
 }

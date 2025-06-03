@@ -123,9 +123,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="baitap.c" />
     <ClCompile Include="lib.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="toan.c" />
+    <ClCompile Include="baihoc.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="toan.h" />
