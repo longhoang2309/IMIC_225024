@@ -32,6 +32,13 @@ int giai_thua(int so_tu_nhien) {
 	return ketqua;
 }
 
+/*void nhap_so() {
+	int n = 0;
+	do {
+
+	} while (n != 0);
+}
+*/
 /*
 	BÀI 4:
 	chức năng:	Tính tiền gửi ngân hàng sau n năm
@@ -40,9 +47,9 @@ int giai_thua(int so_tu_nhien) {
 	output:
 		không có - void
 */
-float tinh_tien_lai(double tien_ban_dau, int so_nam) {
-	double ketqua = 0.0;
-	double lai_1_nam = 0.0;
+float tinh_tien_lai(float tien_ban_dau, int so_nam) {
+	float ketqua = 0.0;
+	float lai_1_nam = 0.0;
 	lai_1_nam = tien_ban_dau * (1 + 0.082);
 	for (int i = 0; i <= so_nam; i++) {
 		ketqua *= ketqua;
@@ -57,7 +64,7 @@ float tinh_tien_lai(double tien_ban_dau, int so_nam) {
 		- float tien_ban_dau
 	output:
 		không có - void
-*/
+
 void so_nguyen_to(int n) {
 	int ketqua = 0;
 	for (int i = 0; i < n; i++) {
@@ -69,3 +76,4 @@ void so_nguyen_to(int n) {
 		}
 	}
 }
+*/
