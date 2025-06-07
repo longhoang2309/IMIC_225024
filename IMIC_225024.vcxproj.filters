@@ -18,18 +18,15 @@
     <ClCompile Include="Main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lib.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="baihoc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="baitap.c">
+    <ClCompile Include="array.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="toan.h">
+    <ClInclude Include="header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

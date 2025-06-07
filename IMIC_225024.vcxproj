@@ -123,13 +123,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="baitap.c" />
-    <ClCompile Include="lib.c" />
+    <ClCompile Include="array.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="baihoc.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="toan.h" />
+    <ClInclude Include="header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
