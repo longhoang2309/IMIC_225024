@@ -47,3 +47,20 @@ void xep_loai(float diem_trung_bình) {
 		printf("loai YEU\n");
 	}
 }
+
+/*
+tính tổng cùa array
+input: địa chỉ bắt đầu của mảng int* mảng
+	số lượng phần tử của mảng int so_phan-tu
+output: int
+*/
+
+int tong_arr(int* mang[], int so_phan_tu)
+{
+	int ketqua = 0;
+	for (int i = 0; i < so_phan_tu; i++)
+	{
+		ketqua = ketqua + mang[i];
+	}
+	return ketqua;
+}

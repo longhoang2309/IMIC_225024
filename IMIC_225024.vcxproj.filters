@@ -27,6 +27,9 @@
     <ClCompile Include="array.c">
       <Filter>Source Files\homework</Filter>
     </ClCompile>
+    <ClCompile Include="string.c">
+      <Filter>Source Files\homework</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h">
