@@ -93,8 +93,9 @@ void first_capital(char* str)
 /*
 Bài 6: Xây dựng hàm. dùng để tìm ký tự c trong chuỗi str. hàm trả về địa chỉ của ký tự c trong chuỗi str
 */
-int c_count(char* str, char c)
+char* c_count(char* str, char c)
 {
+
     for (int i = 0; str[i] != '\0'; i++)
     {
         if (str[i] == c)
@@ -106,4 +107,36 @@ int c_count(char* str, char c)
 
 /*
 bài 7: Xây dựng hàm. dùng để tìm chuỗi subStr trong chuỗi str. hàm trả về địa chỉ bất đầu của subStr trong chuỗi str
+intput: char* str, char* substr
+output: char* kq
 */
+char* str_count(char* str, char* substr)
+{
+    char* kq = NULL;
+    int i = 0;
+    int j = 0;
+    for (int i = 0; i <= so_phan_tu_str(str); i++)
+    {
+        for (int j = 0; j <= so_phan_tu_str(substr); j++)
+        {
+            if (str[i + j] != substr[j])
+            {
+                break;
+            }
+        }
+        if (j < so_phan_tu_str(substr))
+        {
+            return NULL;
+        }
+        else
+        {
+            kq = &str[i];
+            return kq;
+        }
+    }
+    if (i < so_phan_tu_str(str))
+    {
+        return NULL;
+    }
+}
+
