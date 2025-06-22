@@ -110,33 +110,32 @@ bài 7: Xây dựng hàm. dùng để tìm chuỗi subStr trong chuỗi str. hà
 intput: char* str, char* substr
 output: char* kq
 */
+
 char* str_count(char* str, char* substr)
 {
     char* kq = NULL;
     int i = 0;
     int j = 0;
-    for (int i = 0; i <= so_phan_tu_str(str); i++)
+    for (i = 0; i < so_phan_tu_str(str); i++)
     {
-        for (int j = 0; j <= so_phan_tu_str(substr); j++)
+        for (j = 0; j < so_phan_tu_str(substr); j++)
         {
             if (str[i + j] != substr[j])
             {
                 break;
             }
         }
-        if (j < so_phan_tu_str(substr))
-        {
-            return NULL;
-        }
-        else
+        if (j == so_phan_tu_str(substr))
         {
             kq = &str[i];
             return kq;
+
         }
     }
-    if (i < so_phan_tu_str(str))
+    if (i >= so_phan_tu_str(str))
     {
         return NULL;
     }
 }
+
 

@@ -28,4 +28,5 @@ int space_num(char* str);
 int word_count(char* str);
 void capitalize(char* str);
 void first_capital(char* str);
-int c_count(char* str, char c);
+char* c_count(char* str, char c);
+char* str_count(char* str, char* substr);
