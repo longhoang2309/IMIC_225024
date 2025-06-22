@@ -64,3 +64,4 @@ int tong_arr(int* mang[], int so_phan_tu)
 	}
 	return ketqua;
 }
+

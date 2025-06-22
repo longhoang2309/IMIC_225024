@@ -1,30 +1,25 @@
 ﻿#include"header.h"
+#include <stdlib.h>
 
-/*
-nhập từ bàn phím số lượng trong arr
-sau đó nhập giá trị của từng phần tử
-in tổng của các phần tử trong arr
-*/
-
-int arr_sum()
+struct phan_so
 {
-    int arr[100];
-    int n = 0;
-    int sum = 0;
+    int tu_so;
+    int mau_so;
+};
 
-    printf("Enter the number of elements in the array: ");
-    scanf("%d", &n);
-
-    printf("Enter %d elements:\n", n);
-    
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", arr[i]);
-        sum += arr[i];
-    }
-    return sum;
-}
 void main() 
 {
-    printf("%d", arr_sum());
+    struct phan_so A;
+    struct phan_so B;
+    struct phan_so C;
+
+    A.tu_so = 1;
+    A.mau_so = 2;
+
+    B.tu_so = 2;
+    B.mau_so = 3;
+
+    C.tu_so = A.tu_so * B.tu_so;
+    C.mau_so = A.mau_so * B.mau_so;
+    return 0;
 }
