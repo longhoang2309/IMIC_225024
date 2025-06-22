@@ -93,13 +93,13 @@ void first_capital(char* str)
 /*
 Bài 6: Xây dựng hàm. dùng để tìm ký tự c trong chuỗi str. hàm trả về địa chỉ của ký tự c trong chuỗi str
 */
-int c_count(char* str)
+int c_count(char* str, char c)
 {
     for (int i = 0; str[i] != '\0'; i++)
     {
-        if (str[i] == 99)
+        if (str[i] == c)
         {
-
+            return &str[i];
         }
     }
 }

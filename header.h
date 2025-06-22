@@ -4,6 +4,12 @@
 #include<string.h>
 #include<math.h>
 
+//loop
+int tong_so_nguyen(int so_nguyen);
+int giai_thua(int so_tu_nhien);
+void nhap_so();
+float tinh_tien_lai(float tien_ban_dau, int so_nam);
+void so_nguyen_to(int n);
 
 //array
 void tong_array();
@@ -22,3 +28,4 @@ int space_num(char* str);
 int word_count(char* str);
 void capitalize(char* str);
 void first_capital(char* str);
+int c_count(char* str, char c);

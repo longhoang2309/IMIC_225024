@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="array.c" />
+    <ClCompile Include="loop.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="baihoc.c" />
     <ClCompile Include="string.c" />
