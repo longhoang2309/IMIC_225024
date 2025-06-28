@@ -33,6 +33,9 @@
     <ClCompile Include="loop.c">
       <Filter>Source Files\homework</Filter>
     </ClCompile>
+    <ClCompile Include="struct.c">
+      <Filter>Source Files\homework</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h">
