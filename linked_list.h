@@ -15,3 +15,4 @@ void create_linked_list(linked_list_t* t);
 int get_len(linked_list_t* t);
 void add_node(linked_list_t* t, int value);
 int Get_Value_Index(linked_list_t* ll, int index);
+void insert_node(linked_list_t* ll, int val, int index);

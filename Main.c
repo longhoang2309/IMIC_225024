@@ -1,43 +1,32 @@
 ﻿#include"header.h"
+#include"linked_list.h"
 
 
 
-
-/*typedef struct
+/*
+typedef struct
 {
     int tu_so;
     int mau_so;
 }phan_so_t;
-*/
 
-/*typedef struct
+typedef struct
 {
     char ten[30]; // or char* ten;
     int diem_toan;
     int diem_van;
 }hoc_sinh;
+*/
 
-void print_struct(hoc_sinh* arr, int n)
+linked_list_t ll_1;
+linked_list_t ll_2;
+int main() 
 {
-
-    float avg_best = 0;
-    int thu_tu_cao_nhat = 0;
-    for (int i = 0; i < n; i++)
-    {
-        float avg = (arr[i].diem_toan + arr[i].diem_van) / 2;
-        if (avg > avg_best)
-        {
-            thu_tu_cao_nhat = i;
-            avg_best = avg;
-        }
-    }
-    printf("%s co diem trung binh cao nhat (%.2f)\n", arr[thu_tu_cao_nhat].ten, avg_best);
-}*/
-
-void main() 
-{
-    phan_so_t c = { 2,3 };
-    phan_so_t d = { 3,2 };
-    tru_phan_so(c,d);
+    create_linked_list(&ll_1);
+    add_node(&ll_1, 5);
+    insert_node(&ll_1, 2, 2);
+    int x = Get_Value_Index(&ll_1, 1);
+    
+    printf("%d", x);
     return 0;
 }

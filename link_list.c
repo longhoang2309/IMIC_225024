@@ -31,6 +31,18 @@ void add_node(linked_list_t* ll, int val)
 	ll->len++;
 }
 
+void insert_node(linked_list_t* ll, int val, int index)
+{
+	node_t* new_node = malloc(sizeof(node_t));
+	if (new_node == NULL)
+	{
+		return;
+	}
+	new_node->value = val;
+	ll->root_node[index - 2].next_add = new_node;
+	new_node->next_add = ll->root_node[index].next_add;
+}
+
 int Get_Value_Index(linked_list_t* ll, int index)
 {
 	return ll->root_node[index - 1].value;
