@@ -36,9 +36,15 @@
     <ClCompile Include="struct.c">
       <Filter>Source Files\homework</Filter>
     </ClCompile>
+    <ClCompile Include="link_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="linked_list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
