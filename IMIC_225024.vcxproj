@@ -128,12 +128,14 @@
     <ClCompile Include="loop.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="baihoc.c" />
+    <ClCompile Include="ringbuffer.c" />
     <ClCompile Include="string.c" />
     <ClCompile Include="struct.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h" />
     <ClInclude Include="linked_list.h" />
+    <ClInclude Include="ringbuffer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

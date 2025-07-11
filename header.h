@@ -5,6 +5,7 @@
 #include<math.h>
 #include <stdlib.h>
 
+
 //loop
 int tong_so_nguyen(int so_nguyen);
 int giai_thua(int so_tu_nhien);
