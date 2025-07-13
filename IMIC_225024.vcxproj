@@ -126,7 +126,6 @@
     <ClCompile Include="array.c" />
     <ClCompile Include="link_list.c" />
     <ClCompile Include="loop.c" />
-    <ClCompile Include="main.c" />
     <ClCompile Include="baihoc.c" />
     <ClCompile Include="ringbuffer.c" />
     <ClCompile Include="string.c" />
