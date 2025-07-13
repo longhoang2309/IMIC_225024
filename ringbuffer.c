@@ -1,5 +1,6 @@
 ﻿#include "ringbuffer.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 // 1. Khởi tạo RingBuffer
 void CreateRingBuffer(RingBuffer* rb, int capacity) {
@@ -19,6 +20,7 @@ void CreateRingBuffer(RingBuffer* rb, int capacity) {
 // 2. Thêm item vào RingBuffer
 int PutItemToRingBuffer(RingBuffer* rb, int item) {
     if (rb->free_slots == 0) {
+        printf("Ring buffer is full\n");
         return -1; 
     }
 
@@ -31,6 +33,7 @@ int PutItemToRingBuffer(RingBuffer* rb, int item) {
 // 3. Lấy item ra khỏi RingBuffer
 int GetItemFromRingBuffer(RingBuffer* rb, int* out_item) {
     if (rb->free_slots == rb->capacity) {
+        printf("Ring buffer is empty\n");
         return -1; 
     }
 

@@ -48,13 +48,27 @@ void tru_phan_so(phan_so_t a, phan_so_t b);
 int ucln(int a, int b);
 void rut_gon(phan_so_t* a);
 
+typedef enum
+{
+    Nam,
+    Nu
+}gioi_tinh_t;
+typedef enum
+{
+    Gioi,
+    Kha,
+    Trung_Binh,
+    Yeu
+}xep_hang_t;
+
 typedef struct
 {
     char ten[30]; // or char* ten;
     int tuoi;
-    char gioi_tinh[4];
+    gioi_tinh_t gioi_tinh;
     float diem_toan;
     float diem_van;
+    xep_hang_t xep_hang;
 }hoc_sinh;
 
 void scan_hs(hoc_sinh hs_arr[], int so_hs);

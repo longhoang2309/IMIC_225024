@@ -8,7 +8,9 @@
 RingBuffer rb;
 int main() 
 {
-    CreateRingBuffer(&rb, 5);
+    CreateRingBuffer(&rb, 3);
+    PutItemToRingBuffer(&rb, 12);
+    PutItemToRingBuffer(&rb, 10);
 
     return 0;
 }
