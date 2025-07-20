@@ -124,9 +124,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="array.c" />
+    <ClCompile Include="file.c" />
     <ClCompile Include="link_list.c" />
     <ClCompile Include="loop.c" />
-    <ClCompile Include="baihoc.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="ringbuffer.c" />
     <ClCompile Include="string.c" />

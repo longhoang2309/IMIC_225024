@@ -68,10 +68,12 @@ typedef struct
     gioi_tinh_t gioi_tinh;
     float diem_toan;
     float diem_van;
+    float trung_binh;
     xep_hang_t xep_hang;
 }hoc_sinh;
 
 void scan_hs(hoc_sinh hs_arr[], int so_hs);
 void print_list_hs(hoc_sinh hs_arr[], int so_hs);
 void print_trung_binh_best(hoc_sinh* arr, int n);
+void sapXepTheoDiemTB(hoc_sinh* ds, int n);
 
