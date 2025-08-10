@@ -3,9 +3,13 @@
 
 int main()
 {
-	hinh_chu_nhat_s A;
-	A.dai = 20;
-	A.rong = 10;
-	int x = A.tinh_dien_tich();
-	return 0;
+	phan_so A;
+	A.tu_so = 5;
+	A.mau_so = 2;
+	phan_so B;
+	B.tu_so = 3;
+	B.mau_so = 3;
+	
+	A.nhan_phan_so(&B);
+	A.in_phan_so();
 }

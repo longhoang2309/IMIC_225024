@@ -15,7 +15,13 @@ public:
 	output: ko có output
 	*/
 	hinh_chu_nhat_s();
-	
+	/*
+	hàm hủy - có tên trùng vs class thêm dấu ~ ở trc
+	nó sẽ tự động đc khởi tạo khi đối tượng đó bị hủy/ bị giải phóng vùng nhớ (khi máy chạy xong hết hàm main)
+	input: ko có input
+	output: ko có output
+	*/
+	~hinh_chu_nhat_s();
 };
 
 
@@ -26,4 +32,14 @@ public:
 
 	int tinh_dien_tich();
 	int tinh_chu_vi();
+};
+
+class phan_so
+{
+public:
+	int tu_so;
+	int mau_so;
+
+	int nhan_phan_so(phan_so* phan_so_khac);
+	void in_phan_so();
 };
