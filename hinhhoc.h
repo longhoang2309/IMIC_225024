@@ -39,6 +39,7 @@ class phan_so
 public:
 	int tu_so;
 	int mau_so;
+
 	phan_so();
-	phan_so phan_so::operator*(phan_so khac);
+	phan_so::operator*(phan_so khac);
 };

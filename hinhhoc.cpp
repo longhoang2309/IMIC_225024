@@ -31,6 +31,18 @@ int hinh_vuong_s::tinh_chu_vi()
 	printf("doi tuong bị giai phong vung nho\n");
 }
 
+
+phan_so::phan_so()
+{
+	tu_so = 0;
+	mau_so = 0;
+}
+
+phan_so::phan_so(int _tu, int _mau)
+{
+	tu_so = _tu;
+	mau_so = _mau;
+}
 phan_so phan_so::operator*(phan_so khac)
 {
 	phan_so kp;
