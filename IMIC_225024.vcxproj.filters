@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.c">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="array.c">
@@ -38,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="file.c">
       <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="baihoc.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
