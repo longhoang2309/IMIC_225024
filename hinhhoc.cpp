@@ -31,13 +31,10 @@ int hinh_vuong_s::tinh_chu_vi()
 	printf("doi tuong bị giai phong vung nho\n");
 }
 
-int phan_so::nhan_phan_so(phan_so* phan_so_khac)
+phan_so phan_so::operator*(phan_so khac)
 {
-	tu_so *= phan_so_khac->tu_so;
-	mau_so *= phan_so_khac->mau_so;
-	return 0;
-}
-void phan_so::in_phan_so()
-{
-	printf("%d/%d",tu_so, mau_so);
+	phan_so kp;
+	kp.tu_so = tu_so * khac.tu_so;
+	kp.mau_so = mau_so * khac.mau_so;
+	return kp;
 }
