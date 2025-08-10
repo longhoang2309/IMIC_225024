@@ -42,6 +42,12 @@
     <ClCompile Include="baihoc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="hinhhoc.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hinhhoc.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h">

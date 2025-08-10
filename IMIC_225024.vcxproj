@@ -126,6 +126,8 @@
     <ClCompile Include="array.c" />
     <ClCompile Include="baihoc.c" />
     <ClCompile Include="file.c" />
+    <ClCompile Include="hinhhoc.cpp" />
+    <ClCompile Include="hinhhoc.h" />
     <ClCompile Include="link_list.c" />
     <ClCompile Include="loop.c" />
     <ClCompile Include="Main.cpp" />
