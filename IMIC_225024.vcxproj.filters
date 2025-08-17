@@ -48,6 +48,9 @@
     <ClCompile Include="hinhhoc.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="mảng.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h">
@@ -57,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ringbuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mảng.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

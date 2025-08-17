@@ -41,5 +41,5 @@ public:
 	int mau_so;
 
 	phan_so();
-	phan_so::operator*(phan_so khac);
+	phan_so phan_so::nhan_phan_so(phan_so khac);
 };

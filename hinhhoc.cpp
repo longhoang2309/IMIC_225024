@@ -43,7 +43,7 @@ phan_so::phan_so(int _tu, int _mau)
 	tu_so = _tu;
 	mau_so = _mau;
 }
-phan_so phan_so::operator*(phan_so khac)
+phan_so phan_so::nhan_phan_so(phan_so khac)
 {
 	phan_so kp;
 	kp.tu_so = tu_so * khac.tu_so;

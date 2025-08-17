@@ -1,7 +1,4 @@
-﻿#include<stdio.h>
-#include<iostream>
-using namespace std;
-
+#pragma once
 template <class kieu_du_lieu>
 class mang
 {
@@ -23,11 +20,4 @@ public:
 		free(dia_chi);
 	}
 };
-template <class kieu_du_liu>
-
-int main()
-{
-
-	
-	return 0;
-}
+int tong_mang(mang m);
