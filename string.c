@@ -137,5 +137,3 @@ char* str_count(char* str, char* substr)
         return NULL;
     }
 }
-
-

@@ -7,15 +7,15 @@ struct phan_so
 	int mau;
 };
 
-template <class kieu_du_lieu>
+template <class kieu_du_lieu, int so_phan_tu>
 class mang
 {
 public:
 	int so_luong;
 	kieu_du_lieu* dia_chi;
-	mang(int sl)
+	mang()
 	{
-		so_luong = sl;
+		so_luong = so_phan_tu;
 		dia_chi = (kieu_du_lieu*)calloc(so_luong, sizeof(kieu_du_lieu));
 	}
 
@@ -32,7 +32,7 @@ public:
 
 int main()
 {
-
+	mang<int, 3> a;
 	
 	return 0;
 }
