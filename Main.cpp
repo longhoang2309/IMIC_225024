@@ -1,6 +1,11 @@
 ﻿#include<stdio.h>
 #include<iostream>
 using namespace std;
+struct phan_so
+{
+	int tu;
+	int mau;
+};
 
 template <class kieu_du_lieu>
 class mang
@@ -23,7 +28,7 @@ public:
 		free(dia_chi);
 	}
 };
-template <class kieu_du_liu>
+
 
 int main()
 {

@@ -42,13 +42,16 @@
     <ClCompile Include="baihoc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hinhhoc.h">
+    <ClCompile Include="hinh_hoc.h">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="hinhhoc.cpp">
+    <ClCompile Include="hinh_hoc.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="mảng.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="phan_so.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -63,6 +66,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="mảng.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="phan_so.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
