@@ -4,6 +4,7 @@
 
 
 
+/*
 int tong_mang(mang m)
 {
 	int tong = 0;
@@ -13,3 +14,4 @@ int tong_mang(mang m)
 	}
 	return tong;
 }
+*/
