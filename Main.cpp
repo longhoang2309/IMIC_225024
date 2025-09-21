@@ -1,173 +1,114 @@
-﻿#include <iostream>
-#include <string>
-
+﻿#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <iostream>
+#include <string.h>
 using namespace std;
 
-enum gioitinh_t
+void tach_byte(int n)
 {
-	NAM,
-	NU
-};
-enum mon_t
-{
-	TOAN,
-	VAN
-};
-
-ostream& operator<<(ostream& os, gioitinh_t gioi_tinh)
-{
-	if (gioi_tinh == NAM)
-		os << "NAM";
-	else
-		os << "NU";
-	return os;
+	int x = (unsigned int)n;
+	unsigned char high = (x >> 8) & 0xFF;
+	unsigned char low = x & 0xFF;
+	printf("nhap so: %d (0x%04X)\n", n, x & 0xFFFF);
+	printf("8 bit cao: %u (0x%02X)\n", high, high);
+	printf("8 bit thap: %u (0x%02X)\n", low, low);
 }
 
-ostream& operator<<(ostream& os, mon_t mon)
+class pt_bac_2
 {
-	if (mon == TOAN)
-		os << "TOAN";
-	else
-		os << "VAN";
-	return os;
+private:
+	double a, b, c;
+public:
+	pt_bac_2(double a, double b, double c) {
+		this->a = a;
+		this->b = b;
+		this->c = c;
+	}
+    void giai() {
+        if (a == 0) { // bậc nhất
+            if (b == 0) {
+                if (c == 0)
+                    cout << "Phuong trinh vo so nghiem\n";
+                else
+                    cout << "Phuong trinh vo nghiem\n";
+            }
+            else {
+                cout << "Phuong trinh bac nhat, nghiem: x = " << -c / b << endl;
+            }
+            return;
+        }
+
+        double delta = b * b - 4 * a * c;
+
+        if (delta < 0) {
+            cout << "Phuong trinh vo nghiem thuc\n";
+        }
+        else if (delta == 0) {
+            double x = -b / (2 * a);
+            cout << "Phuong trinh co nghiem kep: x = " << x << endl;
+        }
+        else {
+            double x1 = (-b + sqrt(delta)) / (2 * a);
+            double x2 = (-b - sqrt(delta)) / (2 * a);
+            cout << "Phuong trinh co 2 nghiem phan biet:\n";
+            cout << "x1 = " << x1 << endl;
+            cout << "x2 = " << x2 << endl;
+        }
+    }
+};
+
+typedef struct {
+    char light;
+    char fan;
+    char motor;
+}smartHome_t;
+char chuyen_trang_thai(const char* str)
+{
+    if (strstr(str, "on") != NULL)
+    {
+        return 1;
+    }
+    else
+        return 0;
 }
-
-class ThongTinCaNhan
+smartHome_t pair_data(const char* data)
 {
-public:
+    smartHome_t home;
+    const char* pLight = strstr(data, "\"light\"");
+    home.light = (pLight && strstr(pLight, "on")) ? 1 : 0;
 
-private:
-	string ten;
-	int tuoi;
-	gioitinh_t gioi_tinh;
-public:
-	ThongTinCaNhan()
-	{
-		ten = "";
-		tuoi = 0;
-		gioi_tinh = NAM;
-	}
-	ThongTinCaNhan(string ten, int tuoi, gioitinh_t gioitinh)
-	{
-		this->ten = ten;
-		this->tuoi = tuoi;
-		this->gioi_tinh = gioitinh;
-	}
+    const char* pFan = strstr(data, "\"fan\"");
+    home.fan = (pFan && strstr(pFan, "on")) ? 1 : 0;
 
-	void Set_Ten(string ten)
-	{
-		this->ten = ten;
-	}
-
-	string Get_Ten()
-	{
-		return ten;
-	}
-
-	void Set_Tuoi(int tuoi)
-	{
-		this->tuoi = tuoi;
-	}
-
-	int Get_Tuoi()
-	{
-		return tuoi;
-	}
-
-	void Set_GioiTinh(gioitinh_t GioiTinh)
-	{
-		this->gioi_tinh = GioiTinh;
-	}
-
-	gioitinh_t Get_GioiTinh()
-	{
-		return gioi_tinh;
-	}
-
-	void print()
-	{
-		cout << "ten: " << this->ten << endl;
-		cout << "tuoi: " << this->tuoi << endl;
-		cout << "gioi tinh: " << this->gioi_tinh << endl;
-	}
-};
-
-class HocSinh : public ThongTinCaNhan
-{
-private:
-	float diemToan;
-	float diemVan;
-	float diemTB;
-public:
-	HocSinh() {
-		diemToan = 0.0;
-		diemVan = 0.0;
-		diemTB = 0.0;
-	}
-	HocSinh(string ten, int tuoi, gioitinh_t gioitinh, float diemToan, float diemVan) :ThongTinCaNhan(ten, tuoi, gioitinh)
-	{
-		this->diemToan = diemToan;
-		this->diemVan = diemVan;
-	}
-	
-	void Set_diemToan(float diemToan)
-	{
-		this->diemToan = diemToan;
-	}
-	float Get_diemToan()
-	{
-		return diemToan;
-	}
-	void Set_diemVan(float diemVan)
-	{
-		this->diemVan = diemVan;
-	}
-	float Get_diemVan()
-	{
-		return diemVan;
-	}
-	float Get_diemTB()
-	{
-		return (diemToan + diemVan) / 2;
-	}
-
-	void print()
-	{
-		cout << "ten: " << Get_Ten() << endl;
-		cout << "tuoi: " << Get_Tuoi() << endl;
-		cout << "gioi tinh: " << Get_GioiTinh() << endl;
-		cout << "diem toan: " << this->diemToan << endl;
-		cout << "diem van: " << this->diemVan << endl;
-		cout << "diem tb: " << this->Get_diemTB() << endl;
-	}
-};
-
-class GiaoVien: public ThongTinCaNhan
-{
-	mon_t bo_mon;
-public:
-	GiaoVien(string ten, int tuoi, gioitinh_t gioitinh, mon_t mon) :ThongTinCaNhan(ten, tuoi, gioitinh)
-	{
-		this->bo_mon = mon;
-	}
-	void Set_BoMon(mon_t mon)
-	{
-		this->bo_mon = mon;
-	}
-
-	void print()
-	{
-		cout << "ten: " << Get_Ten() << endl;
-		cout << "tuoi: " << Get_Tuoi() << endl;
-		cout << "gioi tinh: " << Get_GioiTinh() << endl;
-		cout << "bo mon: " << this->bo_mon << endl;
-	}
-};
-
+    const char* pMotor = strstr(data, "\"motor\"");
+    home.motor = (pMotor && strstr(pMotor, "on")) ? 1 : 0;
+    
+    return home;
+}
 
 int main()
 {
-	HocSinh A("Nguyen Van A",18,NAM,8.5,2.5);
-	A.print();
+	/*int x;
+	printf("Nhap so nguyen: ");
+	scanf("%d", &x);
+
+	tach_byte(x);*/
+
+    /*double a, b, c;
+    cout << "Nhap he so a, b, c: ";
+    cin >> a >> b >> c;
+
+    pt_bac_2 pt(a, b, c);
+    pt.giai();*/
+
+    const char* data = "HTTP1.1 200 OK{"\
+        "\"light\": \"on\","\
+        "\"fan\" : \"off\","\
+        "\"motor\" : \"off\"}";
+
+    smartHome_t x = pair_data(data);
+    printf("Light: %d\n", x.light);
+    printf("Fan:   %d\n", x.fan);
+    printf("Motor: %d\n", x.motor);
 	return 0;
 }
